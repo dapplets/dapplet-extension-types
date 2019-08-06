@@ -1,6 +1,7 @@
 {
-  "name": "@dapplets/extension-types",
+  "name": "@dapplets/dapplet-extension-types",
   "version": "0.1.0",
+  "author": "Dapplets Team",
   "description": "TypeScript definitions for Modules and Dapplet Extension",
   "main": "",
   "types": "index",
@@ -14,7 +15,6 @@
     "typescript",
     "type"
   ],
-  "author": "Dapplets Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dapplets/dapplet-extension-types/issues"
