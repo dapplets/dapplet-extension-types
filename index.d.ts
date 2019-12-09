@@ -1,8 +1,13 @@
 export interface IModule { }
 
-export interface IContentAdapter extends IModule { }
+export interface IContentAdapter extends IModule {
+    attachFeature(feature: IFeature): void;
+    detachFeature(feature: IFeature): void;
+}
 
-export interface IFeature extends IModule { }
+export interface IFeature extends IModule {
+    config: any;
+}
 
 export interface IResolver extends IModule {
     getBranch(): string;
@@ -29,7 +34,9 @@ declare global {
         sendMessageToOverlay: (msg: string) => void,
         sendWalletConnectTx: (dappletId: string, metadata: any) => Promise<any>,
         connect: (url: string) => Connection,
-        overlay: (url: string, title: string) => Overlay
+        overlay: (url: string, title: string) => Overlay,
+        contextsStarted(contextIds: string[], parentContext: string),
+        contextsFinished(contextIds: string[], parentContext: string)
     };
 
     export class Connection {
