@@ -7,6 +7,8 @@ export interface IContentAdapter extends IModule {
 
 export interface IFeature extends IModule {
     config: any;
+    activate(): void;
+    deactivate(): void;
 }
 
 export interface IResolver extends IModule {
