@@ -1,7 +1,7 @@
 export interface IModule { }
 
 export interface IContentAdapter extends IModule {
-    attachFeature(feature: IFeature): void;
+    attachFeature(feature: IFeature, order: number): void;
     detachFeature(feature: IFeature): void;
 }
 
