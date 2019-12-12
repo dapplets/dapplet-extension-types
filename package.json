@@ -1,6 +1,6 @@
 {
   "name": "@dapplets/dapplet-extension-types",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "author": "Dapplets Team",
   "description": "TypeScript definitions for Modules and Dapplet Extension",
   "main": "",
