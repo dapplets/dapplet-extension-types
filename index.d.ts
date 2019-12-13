@@ -1,11 +1,14 @@
 export interface IModule { }
 
 export interface IContentAdapter extends IModule {
-    attachFeature(feature: IFeature, order: number): void;
+    attachFeature(feature: IFeature): void;
     detachFeature(feature: IFeature): void;
 }
 
 export interface IFeature extends IModule {
+    contextIds: string[];
+    orderIndex: number;
+
     config: any;
     activate(order: number): void;
     deactivate(): void;
