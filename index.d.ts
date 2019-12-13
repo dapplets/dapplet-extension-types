@@ -6,11 +6,11 @@ export interface IContentAdapter extends IModule {
 }
 
 export interface IFeature extends IModule {
-    contextIds: string[];
-    orderIndex: number;
+    contextIds?: string[];
+    orderIndex?: number;
 
     config: any;
-    activate(order: number): void;
+    activate(): void;
     deactivate(): void;
 }
 
