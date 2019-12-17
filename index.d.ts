@@ -35,8 +35,6 @@ declare global {
     export function Inject(name: string): Function;
 
     export var Core: {
-        openOverlay: (url: string, handler: Function) => void,
-        sendMessageToOverlay: (msg: string) => void,
         sendWalletConnectTx: (dappletId: string, metadata: any) => Promise<any>,
         connect: (url: string) => Connection,
         overlay: (url: string, title: string) => Overlay,
