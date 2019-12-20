@@ -35,7 +35,7 @@ declare global {
     export function Inject(name: string): Function;
 
     export var Core: {
-        sendWalletConnectTx: (dappletId: string, metadata: any) => Promise<any>,
+        sendWalletConnectTx: (dappletId: string, metadata: any, callback: (e: { type: string, data?: any }) => void) => Promise<any>,
         connect: (url: string) => Connection,
         overlay: (url: string, title: string) => Overlay,
         contextStarted(contextIds: string[], parentContext?: string),
