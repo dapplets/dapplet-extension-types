@@ -43,7 +43,7 @@ declare global {
     };
 
     export class Connection {
-        subscribe: (id: string, handler: (message: any) => void) => void
+        subscribe: (id: string, handler: (message: any) => void) => { close: () => void }
         // ToDo: add publish
     }
 
