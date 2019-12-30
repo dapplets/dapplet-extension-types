@@ -37,9 +37,11 @@ declare global {
     export var Core: {
         sendWalletConnectTx: (dappletId: string, metadata: any, callback: (e: { type: string, data?: any }) => void) => Promise<any>,
         connect: (url: string) => Connection,
-        overlay: (url: string, title: string) => Overlay,
+        legacyOverlay: (url: string, title: string) => Overlay,
         contextStarted(contextIds: string[], parentContext?: string),
-        contextFinished(contextIds: string[], parentContext?: string)
+        contextFinished(contextIds: string[], parentContext?: string),
+        overlay: (cfg: any) => any,
+        wallet: (cfg: any) => any
     };
 
     export class Connection {
